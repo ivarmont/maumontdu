@@ -1,8 +1,8 @@
 import barrelRoll from "../img/do-a-barrel-roll.webp";
 import "../css/main.css";
-import {FC} from "react";
+import { FC } from "react";
 
-export const Welcome:FC = () => {
+export const Home: FC = () => {
   return (
     <>
       <div className="wrapper">
@@ -12,4 +12,4 @@ export const Welcome:FC = () => {
       </div>
     </>
   );
-}
+};
