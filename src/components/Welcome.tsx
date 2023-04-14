@@ -1,7 +1,8 @@
 import barrelRoll from "../img/do-a-barrel-roll.webp";
 import "../css/main.css";
+import {FC} from "react";
 
-export default function Welcome() {
+export const Welcome:FC = () => {
   return (
     <>
       <div className="wrapper">
