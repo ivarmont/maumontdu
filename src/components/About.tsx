@@ -1,9 +1,10 @@
 import { FC } from "react";
+import { StyledPage, StyledTitle } from "./styles/Page.style";
 
 export const About: FC = () => {
   return (
-    <div>
-      <h1>About</h1>
-    </div>
+    <StyledPage>
+      <StyledTitle>About</StyledTitle>
+    </StyledPage>
   );
 };
