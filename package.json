@@ -9,7 +9,7 @@
     "preview": "vite preview",
     "prettier": "prettier --write .",
     "lint": "eslint src --ext .ts,.tsx",
-    "gh-deploy": "git push origin :gh-pages && git subtree push --prefix dist origin gh-pages"
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@emotion/react": "^11.10.6",
@@ -29,6 +29,7 @@
     "@vitejs/plugin-react": "^3.1.0",
     "eslint": "^8.38.0",
     "eslint-plugin-react": "^7.32.2",
+    "gh-pages": "^5.0.0",
     "prettier": "2.8.7",
     "typescript": "^4.9.3",
     "vite": "^4.2.0"
