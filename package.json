@@ -36,6 +36,7 @@
   },
   "main": "index.js",
   "repository": "https://github.com/ivarmont/maumontdu.git",
+  "homepage": "https://maumontdu.com",
   "author": "Mauricio Montellano <ivar.montellano@gmail.com>",
   "license": "MIT"
 }
