@@ -21,6 +21,7 @@ export const Navbar: FC = () => {
         <LeftContainer>
           <NavbarLinkContainer>
             <NavbarLink to={"/"}>Home</NavbarLink>
+            <NavbarLink to={"/enviroment"}>Enviroment</NavbarLink>
             <NavbarLink to={"/about"}>About</NavbarLink>
             <OpenLinksButton
               onClick={() => {
@@ -39,6 +40,7 @@ export const Navbar: FC = () => {
       {extendNavbar && (
         <NavbarExtendedContainer>
           <NavbarLinkExtended to={"/"}>Home</NavbarLinkExtended>
+          <NavbarLinkExtended to={"/enviroment"}>Enviroment</NavbarLinkExtended>
           <NavbarLinkExtended to={"/about"}>About</NavbarLinkExtended>
         </NavbarExtendedContainer>
       )}
