@@ -9,7 +9,7 @@
     "preview": "vite preview",
     "prettier": "prettier --write .",
     "lint": "eslint src --ext .ts,.tsx",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d docs"
   },
   "dependencies": {
     "@emotion/react": "^11.10.6",
