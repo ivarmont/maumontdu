@@ -3,7 +3,7 @@ import { HashRouter, Route, Routes } from "react-router-dom";
 import React from "react";
 import { About } from "./components/About";
 import { Navbar } from "./components/Navbar";
-import {Enviroment} from "./components/Enviroment";
+import { Enviroment } from "./components/Enviroment";
 
 export default function App() {
   return (
