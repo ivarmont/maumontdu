@@ -1,51 +1,54 @@
 import { FC, useState } from "react";
 import { StyledPage, StyledTitle } from "./styles/Page.style";
 import {
-  Button,
+  Button, Card,
   CardContent,
   Input,
   InputLabel,
   Typography,
 } from "@mui/material";
-import {EnvironmentService, WebEnviromentResponse} from "../api-client/enviroment-service/EnvironmentService";
+import {FunService} from "../api-client/fun-service/FunService";
 
-export const Enviroment: FC = () => {
-  const [urlField, setUrlField] = useState<string>("");
-  const [response, setResponse] = useState<WebEnviromentResponse>();
-  const environmentService = new EnvironmentService();
+export const Fun: FC = () => {
+  const [text, setText] = useState<string>("");
+  const [response, setResponse] = useState();
+  const funService = new FunService();
 
   const getWebInfo= async () =>{
-    const response = await environmentService.evaluateWebSite(urlField);
+    const response = await funService.evaluateWebSite(text);
     console.log(response);
     setResponse(response);
   }
 
   return (
     <StyledPage>
-      <StyledTitle>Enviroment</StyledTitle>
+      <StyledTitle>Fun</StyledTitle>
+      <Card>
+
+
       <CardContent>
         <Typography variant={"h5"}>Website Carbon</Typography>
         <Typography variant={"body1"}>
-          would you like to know how much electricity is consumed by a webpage
+          would you like to know how Yoda would say it
         </Typography>
         <InputLabel htmlFor="my-input">
-          please insert url to evaluate
+          please insert text
         </InputLabel>
         <Input
           id="url-input"
           onChange={(event) => {
-            setUrlField(event.target.value);
+            setText(event.target.value);
           }}
           aria-describedby="url-helper-text"
         />
         <Button
-          type={"submit"}
           onClick={getWebInfo}
         >
-          Evaluate
+          Translate
         </Button>
-        <CardContent>is the webpage green: {response?.green}</CardContent>
+        <CardContent>Translated to: {response}</CardContent>
       </CardContent>
+      </Card>
     </StyledPage>
   );
 };
