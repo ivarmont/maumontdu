@@ -19,7 +19,7 @@ export const Blog: FC = () => {
                     <BlogText>
                         After reading about creat-react-app to be already death, I gave it a try with Vite, so:
                      <CodeText>$yarn create vite</CodeText>
-
+                        After just selected React and typescript.
                     </BlogText>
                 </CardContent>
             </Card>
