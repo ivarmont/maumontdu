@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {Typography} from "@mui/material";
+import { Typography } from "@mui/material";
 
 export const BlogText = styled.p`
   text-align: left;
@@ -7,7 +7,6 @@ export const BlogText = styled.p`
 `;
 
 export const CodeText = styled.p`
-  
   background: #f4f4f4;
   border: 1px solid #ddd;
   border-left: 3px solid #f36d33;

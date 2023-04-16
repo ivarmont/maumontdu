@@ -4,7 +4,7 @@ import React from "react";
 import { About } from "./components/About";
 import { Navbar } from "./components/Navbar";
 import { Fun } from "./components/Fun";
-import {Blog} from "./components/blog/Blog";
+import { Blog } from "./components/blog/Blog";
 
 export default function App() {
   return (
