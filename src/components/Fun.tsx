@@ -12,7 +12,7 @@ export const Fun: FC = () => {
       <StyledTitle>Fun</StyledTitle>
       <Card>
         <CardContent>
-          <Typography variant={"h5"}>Birthday countdown</Typography>
+          <Typography variant={"h5"}>Mauricio's birthday countdown</Typography>
           <CountDown />
         </CardContent>
       </Card>

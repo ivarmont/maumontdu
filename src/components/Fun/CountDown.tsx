@@ -6,12 +6,15 @@ import {
   CountDownValues,
 } from "./styles/CountDownContainer.style";
 
+const defaultRemainingTime = {
+  days: "00",
+  hours: "00",
+  minutes: "00",
+  seconds: "00",
+};
+
 export const CountDown: FC = () => {
-  const [days, setDays] = useState(0);
-  const [hours, setHours] = useState(0);
-  const [minutes, setMinutes] = useState(0);
-  const [seconds, setSeconds] = useState(0);
-  const birthdayDate = "8 Nov 2023";
+  const [remainingTime, setRemainingTime] = useState(defaultRemainingTime);
 
   useEffect(() => {
     const intervalId = setInterval(() => {
@@ -20,35 +23,45 @@ export const CountDown: FC = () => {
     return () => clearInterval(intervalId);
   }, []);
 
+  function formatString(value: number) {
+    if (value < 10) {
+      return `0${value}`;
+    }
+    return value.toString();
+  }
   function updateRemainingTime() {
+    const birthdayDate = "8 Nov 2023";
     const changingDate = new Date(birthdayDate);
+    changingDate.setFullYear((new Date()).getFullYear());
     const currentDate = new Date();
     const totalSeconds =
       (changingDate.getTime() - currentDate.getTime()) / 1000;
 
-    setDays(Math.floor(totalSeconds / 3600 / 24));
-    setHours(Math.floor(totalSeconds / 3600) % 24);
-    setMinutes(Math.floor(totalSeconds / 60) % 60);
-    setSeconds(Math.floor(totalSeconds % 60));
+    setRemainingTime({
+      days: formatString(Math.floor(totalSeconds / 3600 / 24)),
+      hours: formatString(Math.floor(totalSeconds / 3600) % 24),
+      minutes: formatString(Math.floor(totalSeconds / 60) % 60),
+      seconds: formatString(Math.floor(totalSeconds % 60)),
+    });
   }
 
   return (
     <CountDownContainer>
       <CountDownValues>
         <CountDownValue>
-          <BigText>{days}</BigText>
+          <BigText>{remainingTime.days}</BigText>
           <span>days</span>
         </CountDownValue>
         <CountDownValue>
-          <BigText>{hours}</BigText>
+          <BigText>{remainingTime.hours}</BigText>
           <span>hours</span>
         </CountDownValue>
         <CountDownValue>
-          <BigText>{minutes}</BigText>
+          <BigText>{remainingTime.minutes}</BigText>
           <span>minutes</span>
         </CountDownValue>
         <CountDownValue>
-          <BigText>{seconds}</BigText>
+          <BigText>{remainingTime.seconds}</BigText>
           <span>seconds</span>
         </CountDownValue>
       </CountDownValues>
