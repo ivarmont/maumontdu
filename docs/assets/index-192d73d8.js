@@ -198,7 +198,7 @@ Error generating stack: `+i.message+`
   @media (min-width: 700px) {
     display: none;
   }
-`,sx="/assets/maumontdu-logo-d77656c6.png",ux=()=>{const[e,t]=P.useState(!1);return ve(ex,{extendNavbar:e,children:[ve(rx,{children:[N(tx,{children:ve(ox,{children:[N(gi,{to:"/",children:"Home"}),N(gi,{to:"/fun",children:"Fun"}),N(gi,{to:"/blog",children:"Blog"}),N(gi,{to:"/about",children:"About"}),ve(lx,{onClick:()=>{t(n=>!n)},children:[" ",e?N(xc,{children:" ✕"}):N(xc,{children:" ≡"})]})]})}),N(nx,{children:N(ix,{src:sx})})]}),e&&ve(ax,{children:[N(vi,{to:"/",children:"Home"}),N(vi,{to:"/fun",children:"Fun"}),N(vi,{to:"/blog",children:"Blog"}),N(vi,{to:"/about",children:"About"})]})]})},cx=Se.div`
+`,sx="/assets/maumontdu-logo-d77656c6.png",ux=()=>{const[e,t]=P.useState(!1);return ve(ex,{extendNavbar:e,children:[ve(rx,{children:[N(tx,{children:ve(ox,{children:[N(gi,{to:"/",children:"Home"}),N(gi,{to:"/fun",children:"Fun"}),N(gi,{to:"/blog",children:"Blog"}),N(gi,{to:"/about",children:"About"}),ve(lx,{onClick:()=>{t(n=>!n)},children:[" ",e?N(xc,{children:" ✕"}):N(xc,{children:" ≡"})]})]})}),N(nx,{children:N(ix,{src:sx})})]}),e&&ve(ax,{children:[N(vi,{onClick:()=>t(!1),to:"/",children:"Home"}),N(vi,{onClick:()=>t(!1),to:"/fun",children:"Fun"}),N(vi,{onClick:()=>t(!1),to:"/blog",children:"Blog"}),N(vi,{onClick:()=>t(!1),to:"/about",children:"About"})]})]})},cx=Se.div`
   max-width: 600px;
   min-height: 100px;
   margin: 50px auto;
