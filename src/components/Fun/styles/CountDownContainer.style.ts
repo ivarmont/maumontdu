@@ -5,7 +5,6 @@ export const CountDownContainer = styled.div`
   min-height: 100px;
   margin: 50px auto;
   flex-wrap: wrap;
- 
 `;
 export const CountDownValues = styled.div`
   display: flex;

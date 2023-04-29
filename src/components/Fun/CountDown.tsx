@@ -5,6 +5,7 @@ import {
   CountDownValue,
   CountDownValues,
 } from "./styles/CountDownContainer.style";
+import {LoadingSpinner} from "../utils/LoadingSpinner";
 
 const defaultRemainingTime = {
   days: "00",
@@ -15,6 +16,7 @@ const defaultRemainingTime = {
 
 export const CountDown: FC = () => {
   const [remainingTime, setRemainingTime] = useState(defaultRemainingTime);
+
 
   useEffect(() => {
     const intervalId = setInterval(() => {
@@ -32,7 +34,7 @@ export const CountDown: FC = () => {
   function updateRemainingTime() {
     const birthdayDate = "8 Nov 2023";
     const changingDate = new Date(birthdayDate);
-    changingDate.setFullYear((new Date()).getFullYear());
+    changingDate.setFullYear(new Date().getFullYear());
     const currentDate = new Date();
     const totalSeconds =
       (changingDate.getTime() - currentDate.getTime()) / 1000;
@@ -45,7 +47,7 @@ export const CountDown: FC = () => {
     });
   }
 
-  return (
+  return (remainingTime === defaultRemainingTime ? <LoadingSpinner/> :
     <CountDownContainer>
       <CountDownValues>
         <CountDownValue>

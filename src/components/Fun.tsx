@@ -1,7 +1,6 @@
 import { FC, useState } from "react";
 import { StyledPage, StyledTitle } from "./styles/Page.style";
-import { Button, Card, CardContent, Typography } from "@mui/material";
-import { FunService } from "../api-client/fun-service/FunService";
+import { Card, CardContent, Typography } from "@mui/material";
 import { CountDown } from "./Fun/CountDown";
 
 export const Fun: FC = () => {
