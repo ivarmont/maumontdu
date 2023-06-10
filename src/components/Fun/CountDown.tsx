@@ -5,7 +5,7 @@ import {
   CountDownValue,
   CountDownValues,
 } from "./styles/CountDownContainer.style";
-import {LoadingSpinner} from "../utils/LoadingSpinner";
+import { LoadingSpinner } from "../utils/LoadingSpinner";
 
 const defaultRemainingTime = {
   days: "00",
@@ -16,7 +16,6 @@ const defaultRemainingTime = {
 
 export const CountDown: FC = () => {
   const [remainingTime, setRemainingTime] = useState(defaultRemainingTime);
-
 
   useEffect(() => {
     const intervalId = setInterval(() => {
@@ -47,7 +46,9 @@ export const CountDown: FC = () => {
     });
   }
 
-  return (remainingTime === defaultRemainingTime ? <LoadingSpinner/> :
+  return remainingTime === defaultRemainingTime ? (
+    <LoadingSpinner />
+  ) : (
     <CountDownContainer>
       <CountDownValues>
         <CountDownValue>

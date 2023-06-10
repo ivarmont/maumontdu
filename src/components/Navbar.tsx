@@ -40,10 +40,27 @@ export const Navbar: FC = () => {
       </NavbarInnerContainer>
       {extendNavbar && (
         <NavbarExtendedContainer>
-          <NavbarLinkExtended onClick={() => setExtendNavbar(false)} to={"/"}>Home</NavbarLinkExtended>
-          <NavbarLinkExtended onClick={() => setExtendNavbar(false)} to={"/fun"}>Fun</NavbarLinkExtended>
-          <NavbarLinkExtended onClick={() => setExtendNavbar(false)} to={"/blog"}>Blog</NavbarLinkExtended>
-          <NavbarLinkExtended onClick={() => setExtendNavbar(false)} to={"/about"}>About</NavbarLinkExtended>
+          <NavbarLinkExtended onClick={() => setExtendNavbar(false)} to={"/"}>
+            Home
+          </NavbarLinkExtended>
+          <NavbarLinkExtended
+            onClick={() => setExtendNavbar(false)}
+            to={"/fun"}
+          >
+            Fun
+          </NavbarLinkExtended>
+          <NavbarLinkExtended
+            onClick={() => setExtendNavbar(false)}
+            to={"/blog"}
+          >
+            Blog
+          </NavbarLinkExtended>
+          <NavbarLinkExtended
+            onClick={() => setExtendNavbar(false)}
+            to={"/about"}
+          >
+            About
+          </NavbarLinkExtended>
         </NavbarExtendedContainer>
       )}
     </NavbarContainer>

@@ -1,20 +1,12 @@
-import { FC, useState } from "react";
+import { FC } from "react";
 import { StyledPage, StyledTitle } from "./styles/Page.style";
-import { Card, CardContent, Typography } from "@mui/material";
-import { CountDown } from "./Fun/CountDown";
+import { CountDownCard } from "./Fun/CountDownCard";
 
 export const Fun: FC = () => {
-  const [text, setText] = useState<string>("");
-
   return (
     <StyledPage>
       <StyledTitle>Fun</StyledTitle>
-      <Card>
-        <CardContent>
-          <Typography variant={"h5"}>Mauricio's birthday countdown</Typography>
-          <CountDown />
-        </CardContent>
-      </Card>
+      <CountDownCard />
     </StyledPage>
   );
 };
