@@ -1,12 +1,12 @@
 import { FC } from "react";
 import { StyledPage, StyledTitle } from "./styles/Page.style";
-import { CountDownCard } from "./Fun/CountDownCard";
+import { BirthdayCountDown } from "./Fun/BirthdayCountDown";
 
 export const Fun: FC = () => {
   return (
     <StyledPage>
       <StyledTitle>Fun</StyledTitle>
-      <CountDownCard />
+      <BirthdayCountDown />
     </StyledPage>
   );
 };

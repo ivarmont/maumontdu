@@ -31,9 +31,12 @@ export const CountDown: FC = () => {
     return value.toString();
   }
   function updateRemainingTime() {
-    const birthdayDate = "8 Nov 2023";
+    const today = new Date();
+    const birthdayDate = new Date(today.getFullYear(), 10, 8);
+    if (today > birthdayDate) {
+      birthdayDate.setFullYear(today.getFullYear() + 1);
+    }
     const changingDate = new Date(birthdayDate);
-    changingDate.setFullYear(new Date().getFullYear());
     const currentDate = new Date();
     const totalSeconds =
       (changingDate.getTime() - currentDate.getTime()) / 1000;
